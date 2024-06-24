@@ -11,7 +11,7 @@ update_branch() {
   echo "Updating $branch..."
   git checkout $branch
   git pull --rebase origin main
-  if [ $? -ne 0 ]; then
+  if [ $? -ne 0 ]; then  
     echo "Resolve conflicts and continue rebase for $branch"
     exit 1
   fi
