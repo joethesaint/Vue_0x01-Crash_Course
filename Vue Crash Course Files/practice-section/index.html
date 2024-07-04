@@ -7,6 +7,10 @@
   <body>
     <div id="app" v-cloak>
       <p>{{ fullName() }}</p>
+      <p><a :href="url" target="_blank">Google</a></p>
+      <p v-html="raw_url"></p>
+      <p>{{ age }}</p>
+
       <hr />
       
       <!-- Create two input fields and labels for the first name and last name -->
@@ -14,7 +18,10 @@
       <input type="text" v-model="firstName"/>
 
       <label>Last Name</label>
-      <input type="text" />
+      <input type="text" v-model="lastName"/>
+
+      <button type="button" v-on:click="increment">Increment></button>
+      <button type="button" v-on:click="age--">Decrement></button>
 
     </div>
 
